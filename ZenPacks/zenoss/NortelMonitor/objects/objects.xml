@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<objects>
+<!-- ('', 'zport', 'dmd', 'Devices', 'Network', 'Switch', 'Nortel') -->
+<object id='/zport/dmd/Devices/Network/Switch/Nortel' module='Products.ZenModel.DeviceClass' class='DeviceClass'>
+<property visible="True" type="lines" id="zCollectorPlugins" >
+['zenoss.snmp.NewDeviceMap', 'zenoss.snmp.DeviceMap', 'NortelInterfaceMap', 'zenoss.snmp.RouteMap']
+</property>
+</object>
+<!-- ('', 'zport', 'dmd', 'Devices', 'Network', 'Switch', 'Passport') -->
+<object id='/zport/dmd/Devices/Network/Switch/Passport' module='Products.ZenModel.DeviceClass' class='DeviceClass'>
+<property visible="True" type="lines" id="zCollectorPlugins" >
+['zenoss.snmp.NewDeviceMap', 'zenoss.snmp.DeviceMap', 'PassportInterfaceMap', 'PassportRouteMap']
+</property>
+</object>
+<!-- ('', 'zport', 'dmd', 'Manufacturers', 'Nortel') -->
+<object id='/zport/dmd/Manufacturers/Nortel' module='Products.ZenModel.Manufacturer' class='Manufacturer'>
+<tomanycont id='products'>
+<object id='Passport 8606' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+.1.3.6.1.4.1.2272.31
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2272.31']
+</property>
+<property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+</tomanycont>
+</object>
+</objects>
