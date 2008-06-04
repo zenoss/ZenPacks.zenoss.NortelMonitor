@@ -7,7 +7,7 @@ AUTHOR = 'Zenoss'
 LICENSE = ''
 NAMESPACE_PACKAGES = ['ZenPacks', 'ZenPacks.zenoss']
 INSTALL_REQUIRES = []
-COMPAT_ZENOSS_VERS = ''
+COMPAT_ZENOSS_VERS = '>= 2.2'
 PREV_ZENPACK_NAME = 'NortelMonitor'
 # STOP_REPLACEMENTS
 ################################
