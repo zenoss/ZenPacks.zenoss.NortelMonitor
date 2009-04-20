@@ -8,6 +8,9 @@
 </object>
 <!-- ('', 'zport', 'dmd', 'Devices', 'Network', 'Switch', 'Passport') -->
 <object id='/zport/dmd/Devices/Network/Switch/Passport' module='Products.ZenModel.DeviceClass' class='DeviceClass'>
+<property type="lines" id="devtypes" mode="w" >
+[('Nortel Passport', 'SNMP')]
+</property>
 <property visible="True" type="lines" id="zCollectorPlugins" >
 ['zenoss.snmp.NewDeviceMap', 'zenoss.snmp.DeviceMap', 'PassportInterfaceMap', 'PassportRouteMap']
 </property>
