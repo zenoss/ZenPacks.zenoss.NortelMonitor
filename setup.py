@@ -2,12 +2,12 @@
 # These variables are overwritten by Zenoss when the ZenPack is exported
 # or saved.  Do not modify them directly here.
 NAME = 'ZenPacks.zenoss.NortelMonitor'
-VERSION = '2.0.0'
+VERSION = '2.0.1'
 AUTHOR = 'Zenoss'
 LICENSE = ''
 NAMESPACE_PACKAGES = ['ZenPacks', 'ZenPacks.zenoss']
 INSTALL_REQUIRES = []
-COMPAT_ZENOSS_VERS = '>= 2.2'
+COMPAT_ZENOSS_VERS = '>=2.4'
 PREV_ZENPACK_NAME = 'NortelMonitor'
 # STOP_REPLACEMENTS
 ################################

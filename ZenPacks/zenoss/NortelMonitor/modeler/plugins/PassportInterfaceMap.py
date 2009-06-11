@@ -1,6 +1,6 @@
 ######################################################################
 #
-# Copyright 2007, 2008 Zenoss, Inc.  All Rights Reserved.
+# Copyright 2007, 2008, 2009 Zenoss, Inc.  All Rights Reserved.
 #
 ######################################################################
 
@@ -79,7 +79,7 @@ class PassportInterfaceMap(InterfaceMap):
                             row.get('ipAddress',""), row.get('ifindex',""))
                 continue                                 
             if not omtable.has_key(strindex):
-                om = self.processInt(device, iftable[strindex])
+                om = self.processInt(log, device, iftable[strindex])
                 if not om: continue
                 rm.append(om)
                 omtable[strindex] = om
@@ -95,7 +95,7 @@ class PassportInterfaceMap(InterfaceMap):
             om.setIpAddresses.append(ip)
 
         for iface in iftable.values():
-            om = self.processInt(device, iface)
+            om = self.processInt(log, device, iface)
             if om: rm.append(om)
         return rm
 
