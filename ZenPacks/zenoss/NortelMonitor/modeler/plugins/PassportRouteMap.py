@@ -8,9 +8,7 @@ __doc__="""PassportRouteMap
 
 PassportRouteMap maps the interface and ip tables to interface objects
 
-$Id: $"""
-
-__version__ = '$Revision: $'[11:-2]
+"""
 
 from Products.DataCollector.plugins.CollectorPlugin import GetTableMap
 from Products.DataCollector.plugins.zenoss.snmp.RouteMap import RouteMap

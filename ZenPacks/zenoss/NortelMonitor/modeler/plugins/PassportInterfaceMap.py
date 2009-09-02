@@ -8,9 +8,7 @@ __doc__="""PassportInterfaceMap
 
 PassportInterfaceMap maps Nortel Passport interface tables
 
-$Id: $"""
-
-__version__ = '$Revision: $'[11:-2]
+"""
 
 import re
 

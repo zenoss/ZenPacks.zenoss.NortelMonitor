@@ -8,9 +8,7 @@ __doc__="""NortelInterfaceMap
 
 NortelInterfaceMap maps the interface and ip tables to interface objects
 
-$Id: NortelInterfaceMap.py,v 1.24 2003/10/30 18:42:19 edahl Exp $"""
-
-__version__ = '$Revision: $'[11:-2]
+"""
 
 import re
 
