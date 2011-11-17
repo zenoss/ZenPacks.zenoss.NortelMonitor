@@ -46,6 +46,16 @@ class PassportInterfaceMap(InterfaceMap):
                  '.2': 'ifindex',
                  '.3': 'netmask'}
         ),
+        # Interface Description
+        GetTableMap('ifalias', '.1.3.6.1.2.1.31.1.1.1',
+                {
+                '.6' : 'ifHCInOctets',
+                '.7' : 'ifHCInUcastPkts',
+                '.18' : 'description',
+                '.15' : 'highSpeed',
+                }
+        ),
+
     )
 
    
@@ -58,6 +68,25 @@ class PassportInterfaceMap(InterfaceMap):
         porttable = tabledata.get("rcVlanPortTable")
         vlantable = tabledata.get("rcVlanTable")
         iftable = tabledata.get("iftable")
+        ifalias = tabledata.get("ifalias")
+        if iptable is None or iftable is None: return
+        if not ifalias: ifalias = {}
+
+        # add interface alias (cisco description) to iftable
+        for ifidx, data in ifalias.items():
+            if not iftable.has_key(ifidx): continue
+            iftable[ifidx]['description'] = data.get('description', '')
+            # handle 10GB interfaces using IF-MIB::ifHighSpeed
+            speed = iftable[ifidx].get('speed',0)
+            if speed == 4294967295L or speed < 0:
+                try: iftable[ifidx]['speed'] = data['highSpeed']*1e6
+                except KeyError: pass
+
+            # Detect availability of the high-capacity counters
+            if data.get('ifHCInOctets', None) is not None: # and \
+               # data.get('ifHCInUcastPkts', None) is not None:
+                iftable[ifidx]['hcCounters'] = True
+
         if iptable is None or iftable is None or porttable is None \
                 or vlantable is None: return
 
