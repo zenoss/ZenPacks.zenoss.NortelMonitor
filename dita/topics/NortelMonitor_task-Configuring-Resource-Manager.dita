@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "urn:pubid:zenoss.com:doctypes:dita:dtd:task" "task.dtd">
+<task id="d50e82"><title>Configuring <ph conkeyref="names/platform"/></title><taskbody><context><p>All Nortel devices must exist under the <filepath>/Devices/Network/Nortel</filepath> device
+      class.</p></context><steps-informal><ol>
+        <li>
+          <p>Navigate to the device or device class in the <ph conkeyref="names/platform"/> interface.</p>
+
+          <ul>
+            <li>
+              <p>If applying changes to a device class:</p>
+
+              <ol>
+                <li>
+                  <p>Select the class in the devices hierarchy.</p>
+                </li>
+
+                <li>
+                  <p>Click <b>Details</b>.</p>
+                </li>
+
+                <li>
+                  <p>Select Configuration Properties.</p>
+                </li>
+              </ol>
+            </li>
+
+            <li>
+              <p>If applying changes to a device:</p>
+
+              <ol>
+                <li>
+                  <p>Click the device in the device list.</p>
+                </li>
+
+                <li>
+                  <p>Select Configuration Properties.</p>
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <p>Edit the appropriate configuration properties for the device
+          or devices.</p>
+
+          <table>
+            <title>Nortel Configuration Properties</title>
+
+            <tgroup cols="2">
+              <thead>
+                <row>
+                  <entry>Name</entry>
+
+                  <entry>Description</entry>
+                </row>
+              </thead>
+
+              <tbody>
+                <row>
+                  <entry><p>zSnmpCommunity</p></entry>
+
+                  <entry><p>Consult with your network administrators to
+                  determine the SNMP community permitted.</p></entry>
+                </row>
+
+                <row>
+                  <entry><p>zSnmpMonitorIgnore</p></entry>
+
+                  <entry><p>This should be set to
+                  <codeph outputclass="literal">False</codeph></p></entry>
+                </row>
+
+                <row>
+                  <entry><p>zSnmpPort</p></entry>
+
+                  <entry><p>The default port is 161.</p></entry>
+                </row>
+
+                <row>
+                  <entry><p>zSnmpVer</p></entry>
+
+                  <entry><p>This should be set to
+                  <codeph outputclass="literal">v2c</codeph></p></entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </li>
+
+        <li>
+          <p>Click <uicontrol outputclass="guibutton">Save</uicontrol> to save your changes. You
+          will now be able to start collecting the Nortel device metrics from
+          this device.</p>
+        </li>
+
+        <li>
+          <p>Navigate to Graphs and you should see some placeholders for
+          graphs. After approximately fifteen minutes you should see the
+          graphs start to become populated with information.</p>
+        </li>
+      </ol></steps-informal></taskbody></task>

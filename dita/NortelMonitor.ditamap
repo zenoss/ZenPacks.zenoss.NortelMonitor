@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map
+  PUBLIC "urn:pubid:zenoss.com:doctypes:dita:dtd:map" "map.dtd">
+<map>
+   <title>NortelMonitor</title>
+   <topicref href="topics/NortelMonitor.dita">
+      <topicref href="topics/NortelMonitor_ref-Prerequisites.dita"/>
+      <topicref href="topics/NortelMonitor_ref-Configuring-Nortel-Devices-to-Allow-SNMP-Queries.dita"/>
+      <topicref href="topics/NortelMonitor_task-Configuring-Resource-Manager.dita"/>
+      <topicref href="topics/NortelMonitor_ref-Daemons.dita"/>
+   </topicref>
+</map>

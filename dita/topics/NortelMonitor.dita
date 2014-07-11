@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "urn:pubid:zenoss.com:doctypes:dita:dtd:reference" "reference.dtd">
+<reference id="referenceid">
+  <title>(NortelMonitor) Nortel Monitor</title>
+  <shortdesc>The <zenpack>ZenPacks.zenoss.NortelMonitor</zenpack> ZenPack monitors devices from Nortel Networks.</shortdesc>
+  <refbody>
+  </refbody>
+</reference>
